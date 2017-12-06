@@ -396,7 +396,7 @@ body{
     display: flex-inline;
     background: transparent;
     white-space: nowrap;
-    padding-left: 2%;
+    left: 2%;
     width: 96%;
     position:relative;
     top:3%;
