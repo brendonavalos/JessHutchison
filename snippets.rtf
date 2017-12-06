@@ -1,0 +1,99 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf830
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \
+\
+BLUR EFFECT\
+\
+$(document).on('click', function(e) \{ \
+    if ( $(e.target).closest('#aboutbtn').length ) \{\
+        $("#about,#contact,#emmy,#client,#window").toggle(); $("body").css("cursor","url('images/closecursor.png'), auto");\
+        $("div.content").css("filter","blur(2px)");\
+        $("div#jess").css("filter","blur(2px)");\
+        $("div#hutchison").css("filter","blur(2px)");\
+    \}else if ( ! $(e.target).closest('document.body').length ) \{\
+        $('#about,#contact,#emmy,#client,#window').hide(); \
+        $("body").css("cursor","url('images/arrow.png'), auto")\
+        $("div.content").css("filter","blur(0px)");\
+        $("div#jess").css("filter","blur(0px)");\
+        $("div#hutchison").css("filter","blur(0px)");\
+    \}   \
+\});    \
+\
+About Btn Scroll\
+\
+\
+$(document).scroll(function() \{\
+  var y = $(this).scrollTop();\
+  if (y > 0) \{\
+    $('#aboutbtn').fadeIn(20);\
+  \} else \{\
+    $('#aboutbtn').fadeOut(20);\
+  \}\
+\});    \
+\
+\
+\
+SHEEPL PURPLE\
+\
+    $("div#sheeple img").hover(\
+    function() \{\
+    $("div.bg").css("background-color","#c984ff");\
+    \},\
+    function() \{\
+    $("div.bg").css("background-color","#ffffff");\
+    \}      \
+    );\
+\
+\
+\
+\
+RANDOM PLACEMENT\
+\
+\
+$("div#sheeple img").hover() \{\
+  var bodyWidth = document.body.clientWidth\
+  var bodyHeight = document.body.clientHeight;\
+  var randPosX = Math.floor((Math.random()*bodyWidth));\
+  var randPosY = Math.floor((Math.random()*bodyHeight));\
+  var posXY = 'x: ' + randPosX + '<br />' + 'y: ' + randPosY;\
+  \
+  $(\'91.bg).css('left', randPosX);\
+  $('#rand_pos').css('top', randPosY);\
+  \
+\});\
+\
+\
+\
+\
+OLD KEYFRAME ANIMATION\
+\
+@keyframes hutchslide \{\
+  0% \{\
+    opacity:0;\
+    transform: translate3d(0,-20%,0) rotateZ(360deg);\
+  \
+  \}\
+  100% \{\
+    opacity:1;\
+    transform: translate3d(0,0%,0) rotateZ(360deg);\
+\
+  \}\
+\}\
+\
+\
+@keyframes jessslide \{\
+  0% \{\
+    opacity: 0;\
+     transform: translate3d(0,20%,0) rotateZ(360deg);\
+  \}\
+  100% \{\
+    opacity:1;\
+  transform: translate3d(0,0%,0) rotateZ(360deg);\
+  \}\
+\}\
+}
